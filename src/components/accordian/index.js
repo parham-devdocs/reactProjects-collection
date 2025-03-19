@@ -21,7 +21,7 @@ export default function Accordian() {
   }
 
   return (
-    <div className="px-7 lg:w-[600px] w-full mx-auto mt-24 flex flex-col gap-7 items-center">
+    <div className="px-7 lg:w-[600px] w-full mx-auto mt-24 flex flex-col gap-7 items-center h-screen">
       <button
         className="px-4 py-2 bg-amber-300 text-black rounded-md"
         onClick={() => setMultipleSelection((prev) => !prev)}
