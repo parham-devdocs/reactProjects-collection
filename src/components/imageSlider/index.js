@@ -56,7 +56,6 @@ function forwardHandler() {
 </button>        </div>
         <div className=" absolute bottom-5 flex gap-2 items-center w-full justify-center"> {images.map((_,index)=>{return <div key={index} className={currentImage===index ? " w-3 h-3 rounded-full bg-white":" w-3 h-3 rounded-full bg-slate-700"}></div>})}</div>
 
-        <button></button>
 </div>
         </div>
     )
