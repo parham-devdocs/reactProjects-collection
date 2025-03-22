@@ -4,6 +4,7 @@ import  RandomColor  from './components/randomColor';
 import { StarRating } from './components/starRating';
 import ImageSlider from './components/imageSlider';
 import LoadMoreButton from './components/loadMoreButton';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <StarRating noOfStars={5}/>
       <ImageSlider/>
       <LoadMoreButton/>
+      <Sidebar/>
     </div>
   );
 }
