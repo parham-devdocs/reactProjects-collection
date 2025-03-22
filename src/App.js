@@ -5,6 +5,7 @@ import { StarRating } from './components/starRating';
 import ImageSlider from './components/imageSlider';
 import LoadMoreButton from './components/loadMoreButton';
 import Sidebar from './components/Sidebar';
+import QRCodeGenerator from './components/qrCodeGenerator';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ImageSlider/>
       <LoadMoreButton/>
       <Sidebar/>
+      <QRCodeGenerator/>
     </div>
   );
 }
