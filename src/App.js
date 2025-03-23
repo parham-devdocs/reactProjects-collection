@@ -7,6 +7,7 @@ import LoadMoreButton from './components/loadMoreButton';
 import Sidebar from './components/Sidebar';
 import QRCodeGenerator from './components/qrCodeGenerator';
 import LightDarkMode from './components/lightModeDarkModeSwitch';
+import { ScrollIndicator } from './components/scrollIndicator';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Sidebar/>
       <QRCodeGenerator/>
       <LightDarkMode/>
+      <ScrollIndicator/>
     </div>
   );
 }
