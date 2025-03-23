@@ -6,6 +6,7 @@ import ImageSlider from './components/imageSlider';
 import LoadMoreButton from './components/loadMoreButton';
 import Sidebar from './components/Sidebar';
 import QRCodeGenerator from './components/qrCodeGenerator';
+import LightDarkMode from './components/lightModeDarkModeSwitch';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <LoadMoreButton/>
       <Sidebar/>
       <QRCodeGenerator/>
+      <LightDarkMode/>
     </div>
   );
 }
