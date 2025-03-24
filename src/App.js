@@ -9,6 +9,7 @@ import QRCodeGenerator from './components/qrCodeGenerator';
 import LightDarkMode from './components/lightModeDarkModeSwitch';
 import { ScrollIndicator } from './components/scrollIndicator';
 import Tabs from './components/tabs';
+import ModalTest from './components/modal/modal-test';
 const tabsData=[{header:"tab 1",content:"content 1"},{header:" tab 2",content:"content 2"},{header:"tab 3",content:"content 3"}]
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <LightDarkMode/>
       <ScrollIndicator/>
       <Tabs tabs={tabsData}/>
+      <ModalTest/>
     </div>
   );
 }
