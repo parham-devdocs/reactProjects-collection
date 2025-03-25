@@ -12,6 +12,7 @@ import Tabs from './components/tabs';
 import ModalTest from './components/modal/modal-test';
 import GithubProfileFinder from './components/githubProfileFinder';
 import AutoComletionWithApi from './components/autocompletion-with-API';
+import TicTacToe from './components/ticTacToe';
 const tabsData=[{header:"tab 1",content:"content 1"},{header:" tab 2",content:"content 2"},{header:"tab 3",content:"content 3"}]
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <ModalTest/>
       <GithubProfileFinder/>
       <AutoComletionWithApi/>
+      <TicTacToe/>
     </div>
   );
 }
