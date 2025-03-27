@@ -1,17 +1,20 @@
-import { useEffect, useState } from "react"
 
-export function ScrollIndicator() {
+import { useEffect, useReducer, useRef, useState } from "react"
+
+export default function ScrollToTop_Button() {
 const [products,setProducts]=useState([])
 const [errorMessage,setErrorMessage]=useState("")
 const [isLoading,setIsLoading]=useState(false)
-const [scrollPercentage,setScrollPercentage]=useState(0)
-function handleScrollPercentage() {
 
-    const fullPageHeight = document.documentElement.scrollHeight;
-    const h=document.documentElement.scrollTop
-    const clientHeight=document.documentElement.clientHeight
-   const height=fullPageHeight-clientHeight
-  setScrollPercentage(()=>h/height*100)
+
+function scrollToBottom() {
+  
+    document.documentElement.scrollTo(0,document.documentElement.scrollHeight)
+
+}
+
+function scrollTOTop() {
+    document.documentElement.scrollTo(0,0)
 
 }
 
@@ -32,18 +35,14 @@ useEffect(() => {
         .then(data =>{ setProducts(data.products) ; setIsLoading(false)}) // Assuming the API returns an object with a `products` key
         .catch(error =>{setErrorMessage(error.message);console.log(errorMessage)}); // Handle errors gracefully
 }, []);
-useEffect(()=>{
-    window.addEventListener("scroll",handleScrollPercentage)
-    return window.removeEventListener("scroll",()=>{})
-},[])
+
     return(
-        <div className=" w-full min-h-screen  flex flex-col items-center justify-center relative">
-            <nav className=" w-full h-28 bg-amber-100  flex fixed top-0 left-0 z-50  ">
-                <div className={`h-3 bg-amber-400  self-end`} style={{width:`${scrollPercentage}%`}} />
-            </nav>
+        <div  className=" w-full min-h-screen  flex flex-col items-center justify-center relative scroll-smooth">
+            <button className=" py-1 px-2 rounded-md bg-amber-400" onClick={scrollToBottom}>scroll to bottom</button>
 <ul className=" space-y-20 mt-52">{products && products.length>0 &&products.map(product=><li>{product.title}</li>)}</ul>
 <div>{errorMessage && errorMessage}</div>
 <div className=" mt-0">{isLoading && "Loading"}</div>
+<button className=" py-1 px-2 rounded-md bg-amber-400" onClick={scrollTOTop}>scroll to top</button>
         </div>
     )
 }
