@@ -16,6 +16,8 @@ import TicTacToe from './components/ticTacToe';
 import UseOutsideClickComponent from './components/useOutsideClick/test';
 import UserWindowResizeComponent from './components/useWindowResize/useWindowResizeComponent';
 import  ScrollToTopBottom  from './components/scrollToTop_Button';
+import ScrollToParticularSection  from "./components/ScrollToParticularSection";
+import WeatherApp from './components/weatherApp';
 const tabsData=[{header:"tab 1",content:"content 1"},{header:" tab 2",content:"content 2"},{header:"tab 3",content:"content 3"}]
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
       <UseOutsideClickComponent/>
       <UserWindowResizeComponent/>
       <ScrollToTopBottom/>
+      <ScrollToParticularSection/>
+      <WeatherApp/>
     </div>
   );
 }
